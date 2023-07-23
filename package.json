@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "8.2.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raymond-XishengChen/README-Generator.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Raymond-XishengChen/README-Generator/issues"
+  },
+  "homepage": "https://github.com/Raymond-XishengChen/README-Generator#readme"
 }
