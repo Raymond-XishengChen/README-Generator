@@ -55,7 +55,7 @@ function generateMarkdown(data) {
   * [Installation Instructions](#Installation-Instuctions)
   * [Usage of the Project](#Usage-of-the-Project)
   * [Contributions](#Contributions)
-  * [Test Instructions](#TestInstructions)
+  * [Test Instructions](#Test-Instructions)
   * [License](#License)
 
   ## Installation Instructions <a id="Installation-Instuctions"></a>
@@ -64,10 +64,10 @@ function generateMarkdown(data) {
   ## Usage of the Project <a id="Usage-of-the-Project"></a>
   ${data.usage}
 
-  ## Contributions <a id="Usage-of-the-Project"></a>
+  ## Contributions <a id="Contributions"></a>
   ${data.contributing}
 
-  ## Test Instructions <a id="Usage-of-the-Project"></a>
+  ## Test Instructions <a id="Test-Instructions"></a>
   ${data.tests}
 `;
 }
