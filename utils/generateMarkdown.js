@@ -46,7 +46,7 @@ function generateMarkdown(data) {
   // Pass in the license and get the license badge
   const licenceLink = renderLicenseBadge(data.license);
   return `# ${data.title}
-  ${licenceLink} <a name="License"></a>
+  ${licenceLink} <a id="License"></a>
 
   ## Description
   ${data.description}
@@ -58,16 +58,16 @@ function generateMarkdown(data) {
   * [Test Instructions](#TestInstructions)
   * [License](#License)
 
-  ## Installation Instructions <a name="Installation-Instuctions"></a>
+  ## Installation Instructions <a id="Installation-Instuctions"></a>
   ${data.installation}
 
-  ## Usage of the Project <a name="Usage-of-the-Project"></a>
+  ## Usage of the Project <a id="Usage-of-the-Project"></a>
   ${data.usage}
 
-  ## Contributions <a name="Usage-of-the-Project"></a>
+  ## Contributions <a id="Usage-of-the-Project"></a>
   ${data.contributing}
 
-  ## Test Instructions <a name="Usage-of-the-Project"></a>
+  ## Test Instructions <a id="Usage-of-the-Project"></a>
   ${data.tests}
 `;
 }
