@@ -25,6 +25,6 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 
 # Walkthrough Video
-[Walkthrough Video](https://watch.screencastify.com/v/8PSCdMLYzMGbta0ZBfD1)
+[Walkthrough Video](https://watch.screencastify.com/v/ij7IV8C3kivgorsjKHor)
 
-![](./Walkthrough/README_Generator.gif)
+![](./Walkthrough/README_Generator_Walkthrough.gif)
