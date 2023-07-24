@@ -1,44 +1,59 @@
+const licenseList = [
+{ 
+  name: 'Apache License',
+  link: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+},
+{
+  name: 'Boost Software License',
+  link: '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)',
+},
+{
+  name: 'MIT License',
+  link: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+},
+{
+  name: 'ISC License',
+  link: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
+},
+{
+  name: 'Mozilla Public License',
+  link: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)',
+},
+{
+  name: 'None',
+  link: '',
+}
+]
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === "None"){
     return "";
-  } else {
-    const licenseBadge = `https://img.shields.io/badge/license-${license}-blue.svg`;
-    return licenseBadge;
+  } else {      
+    console.log(license);
+    for (const badge of licenseList){
+      if (license === badge.name){
+        return badge.link;
+      }
+    }
   }
 }
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license === "None"){
-    return "";
-  } else {
-    const licenseLink = `https://img.shields.io/badge/license-${license}-blue.svg`;
-    return licenseLink;
-  }
-}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  const licenceLink = renderLicenseLink(data.license);
+  const licenceLink = renderLicenseBadge(data.license);
   return `# ${data.title}
-  ![Github license](https://img.shields.io/badge/license-${data.license}-blue.svg)
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+  ${licenceLink}
 
   ## Description
   ${data.description}
 
   ## Table of Contents
-  * [Installation Instructions]
+  * [Installation Instructions](#InstallationInstuctions)
   * [Usage of the Project]
   * [Contributions]
-  * [Test Instructions]
+  * [Test Instructions](#TestInstructions)
   * [License]
 
   ## Installation Instructions
@@ -52,8 +67,6 @@ function generateMarkdown(data) {
 
   ## Test Instructions
   ${data.tests}
-
-
 `;
 }
 

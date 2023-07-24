@@ -40,7 +40,7 @@ const questions = [
         name: 'license',
         message: 'Please select a license for this project if applicable: ',
         choices: [
-            "Apache License", "GNU General Public License", "Boost Software License", "MIT License", "Eclipse Public License", "Mozilla Public License", "None"
+            "Apache License", "Boost Software License", "MIT License", "ISC License", "Mozilla Public License", "None"
         ]
     }
 ];
