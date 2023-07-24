@@ -1,3 +1,5 @@
+// Create a list of Github Licenses with name and the links of the badges.
+// Including the "None" option
 const licenseList = [
 { 
   name: 'Apache License',
@@ -31,7 +33,6 @@ function renderLicenseBadge(license) {
   if (license === "None"){
     return "";
   } else {      
-    console.log(license);
     for (const badge of licenseList){
       if (license === badge.name){
         return badge.link;
@@ -42,30 +43,31 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  // Pass in the license and get the license badge
   const licenceLink = renderLicenseBadge(data.license);
   return `# ${data.title}
-  ${licenceLink}
+  ${licenceLink} <a name="License"></a>
 
   ## Description
   ${data.description}
 
   ## Table of Contents
-  * [Installation Instructions](#InstallationInstuctions)
-  * [Usage of the Project]
-  * [Contributions]
+  * [Installation Instructions](#Installation-Instuctions)
+  * [Usage of the Project](#Usage-of-the-Project)
+  * [Contributions](#Contributions)
   * [Test Instructions](#TestInstructions)
-  * [License]
+  * [License](#License)
 
-  ## Installation Instructions
+  ## Installation Instructions <a name="Installation-Instuctions"></a>
   ${data.installation}
 
-  ## Usage of the Project
+  ## Usage of the Project <a name="Usage-of-the-Project"></a>
   ${data.usage}
 
-  ## Contributions
+  ## Contributions <a name="Usage-of-the-Project"></a>
   ${data.contributing}
 
-  ## Test Instructions
+  ## Test Instructions <a name="Usage-of-the-Project"></a>
   ${data.tests}
 `;
 }
